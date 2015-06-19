@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Cuadrantes Policia</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- Load Leaflet from CDN-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.rawgit.com/domoritz/leaflet-locatecontrol/gh-pages/dist/L.Control.Locate.min.css" />
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://cdn.rawgit.com/domoritz/leaflet-locatecontrol/gh-pages/dist/L.Control.Locate.ie.min.css"/>
+    <![endif]-->
+    <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <!-- we encourage you to replace 'latest' with a hardcode version number (like '1.0.0-rc.7') in production applications -->
+    <script src="//cdn.jsdelivr.net/leaflet.esri/latest/esri-leaflet.js"></script>
+    <!-- Include Leaflet.markercluster via rawgit.com, do not use in production -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/MarkerCluster.css">
+    <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v0.4.0/dist/leaflet.markercluster.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/1.0.0-rc.4/esri-leaflet-geocoder.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/1.0.0-rc.4/esri-leaflet-geocoder.css">
+
+
+    <!-- Load Clustered Feature Layer from CDN -->
+    <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-clustered-feature-layer/1.0.0-rc.1/esri-leaflet-clustered-feature-layer.js"></script>
+    <script src="http://cdn.rawgit.com/domoritz/leaflet-locatecontrol/gh-pages/dist/L.Control.Locate.min.js" ></script>
+
+
+  </head>
+  <body>
+    <div id="loadingSpace">
+      <img src="imagenes/cargando.gif" style="width: 68px;position: absolute; top: 44%; left: 46%;">
+    </div>
+    <div id="divBanner">
+      <div id="banner">
+        
+      </div>
+    </div>
+    <div id="map">
+      <div id="homeSpace">
+        <img src="imagenes/home.png" onclick="homeExtent()" style="width: 45px;">
+      </div>
+      <div id="checkBoxSpace">
+        <input type="checkbox" id="capaBarrios" name="CB" />
+        <label for="capaBarrios"><span></span><img src="imagenes/texto_barrios.png" style="position: absolute;left: 30px;"></label>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

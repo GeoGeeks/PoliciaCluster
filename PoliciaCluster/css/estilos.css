@@ -1,0 +1,269 @@
+body { 
+  margin:0; 
+  padding:0; 
+}
+#map { 
+  position: absolute; 
+  width: 100%;
+  height: 85%;
+}
+
+#divBanner{
+  position: relative;
+  width: 100%;
+  height: 15%;
+  background-image: url('../imagenes/banner_fondo.png');
+  background-size: 100% 100%;
+}
+
+#banner{
+  background-image: url('../imagenes/banner.png');
+  width: 100%;
+  height: 100%;
+  background-size: auto 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cluster {
+  background: #02650B;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #02650B;
+  font-family: monospace;
+}
+
+.cluster:before {
+   content: ' ';
+   position: absolute;
+   border-radius: 50%;
+   z-index: -1;
+   top: 1px;
+   left: 1px;
+   right: 1px;
+   bottom: 1px;
+   border: 1px solid white;
+}
+
+.digits-1 {
+  font-size: 14px;
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.digits-2 {
+  font-size: 16px;
+  height: 34px;
+  width: 34px;
+  line-height: 35px;
+  margin-top: -17px;
+  margin-left: -17px;
+}
+
+.digits-2:before {
+  border-width: 2px;
+}
+
+.digits-3 {
+  font-size: 18px;
+  height: 48px;
+  width: 47px;
+  line-height: 47px;
+  border-width: 3px;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+.digits-3:before {
+  border-width: 3px;
+}
+
+.digits-4 {
+  font-size: 18px;
+  height: 58px;
+  width: 58px;
+  line-height: 57px;
+  border-width: 4px;
+  margin-top: -29px;
+  margin-left: -29px;
+}
+
+.digits-4:before {
+  border-width: 4px;
+}
+
+.digits-5 {
+  font-size: 20px;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  border-width: 5px;
+  margin-top: -29px;
+  margin-left: -29px;
+}
+
+.digits-5:before {
+  border-width: 5px;
+}
+
+.flechaIzq {
+  cursor: pointer;
+  position: absolute;
+  top: 38%;
+  left: -14px;
+}
+.flechaDer{
+  cursor: pointer;
+  position: absolute;
+  top: 38%;
+  right: -14px;
+}
+.leaflet-control-zoom-in{
+  background-image: url('../imagenes/zoomIn.png');
+  width: 45px !important;
+  height: 45px !important;
+  background-color: transparent !important;
+  border-bottom: 0 !important;
+  cursor: pointer !important;
+  margin-bottom: 15px;
+}
+.leaflet-control-zoom-out{
+  background-image: url('../imagenes/zoomOut.png');
+  width: 45px !important;
+  height: 45px !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+}
+.leaflet-control-zoom{
+    box-shadow: none !important;
+}
+
+/* Chack Box */
+#checkBoxSpace{
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  right: 40px;
+  top: 67px;
+  width: 111px;
+  height: 34px;
+  background-image: url('../imagenes/fondo_boton_barrios.png');
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:40px;
+    height:30px;
+    background:url(../imagenes/checkbox.png) -39px top no-repeat;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../imagenes/checkbox.png) 0px top no-repeat;
+}
+
+#checkBoxSpace label{
+  cursor: pointer;
+}
+
+/* Fin CheckBox Style */
+
+/* Estilos boton locate */
+.leaflet-bar-part{
+  width: 45px !important;
+  height: 45px !important;
+  background-image: url(../imagenes/locate.png) !important;
+  background-position: 0px 0px !important;
+  background-size: 100% 100% !important;
+  background-repeat: repeat !important;
+  background-color: transparent !important;
+  position: absolute;
+  right: 30px;
+}
+
+.geocoder-control-input{
+  width: 45px !important;
+  background-image: url('../imagenes/search.png') !important;
+  height: 45px !important;
+  background-size: 45px 45px !important;
+  box-shadow: none !important;
+}
+.leaflet-bar{
+  border-radius: 10px !important;
+}
+.geocoder-control-expanded .geocoder-control-input{
+  width: 285 !important;
+  webkit-transition: width .175s ease-in;
+  -moz-transition: width .175s ease-in;
+  -ms-transition: width .175s ease-in;
+  -o-transition: width .175s ease-in;
+  transition: width .175s ease-in;
+}
+
+.geocoder-control{
+  position: absolute;
+  right: 97px;
+}
+
+.leaflet-control-locate{
+    box-shadow: none;
+}
+
+.fa-map-marker{
+  display: none !important;
+}
+
+.leaflet-control-layers{
+  display: none;
+}
+/* Fin estilos boton locate */
+#homeSpace{
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 132px;
+  left: 10px;
+}
+#loadingSpace{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  background-color: rgba(0,0,0,0.6);
+}
+.leaflet-popup-content-wrapper{
+  background-color: #DADADA;
+}
+.leaflet-popup-tip{
+  background-color: #DADADA;
+}
+.leaflet-popup-close-button{
+  color: #464646 !important;
+}
+
+.leaflet-popup-content{
+  font-family: AvenirNextLTPro_Regular;
+}
+
+.labelBarrios{
+  font-family: AvenirNextLTPro_Regular;
+  color: black;
+  text-align: center;
+}
+
+@font-face {
+   font-family: 'AvenirNextLTPro_Regular';
+    src: url('../font/Regular/AvenirNextLTPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../font/Regular/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../font/Regular/AvenirNextLTPro-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../font/Regular/AvenirNextLTPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../font/Regular/AvenirNextLTPro-Regular.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
